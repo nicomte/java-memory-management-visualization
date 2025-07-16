@@ -25,7 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ### Authors
-Alenka Isenring
-Andrea Sustic
-Fabrice von Jürchen
+Alenka Isenring, 
+Andrea Sustic, 
+Fabrice von Jüchen, 
 Nico Graf
