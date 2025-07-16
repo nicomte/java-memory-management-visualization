@@ -1,0 +1,338 @@
+[
+  {
+    "title": "Point - Line",
+    "steps": [
+      {
+        "explanation": "The main() method is called and pushed to the call stack.",
+        "codeLine": 1,
+        "instructions": [
+          {
+            "type": "callStack",
+            "action": "push",
+            "payload": {
+              "name": "main()",
+              "tooltip": "",
+              "classes": [
+                "method_main"
+              ]
+            }
+          },
+          {
+            "type": "memStack",
+            "action": "push",
+            "payload": {
+              "name": "args",
+              "type": "String[]",
+              "value": "\"\"",
+              "tooltip": "",
+              "classes": [
+                "method_main"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "explanation": "A new Point object is created with values (10, 5), and a reference to it is stored in variable 'a'.",
+        "codeLine": 2,
+        "instructions": [
+          {
+            "type": "heap",
+            "action": "push",
+            "payload": {
+              "name": "x",
+              "value": "10",
+              "type": "int",
+              "classes": [
+                "object_1"
+              ],
+              "tooltip": "memAddress: 0x0001"
+            }
+          },
+          {
+            "type": "heap",
+            "action": "push",
+            "payload": {
+              "name": "y",
+              "value": "5",
+              "type": "int",
+              "classes": [
+                "object_1"
+              ],
+              "tooltip": "memAddress: 0x0005"
+            }
+          },
+          {
+            "type": "memStack",
+            "action": "push",
+            "payload": {
+              "name": "a",
+              "value": "0x0001",
+              "type": "Reference",
+              "classes": [
+                "object_1"
+              ],
+              "tooltip": "Reference to Point at 0x0001"
+            }
+          }
+        ]
+      },
+      {
+        "explanation": "A second Point object is created with values (3, 4), and a reference to it is stored in variable 'b'.",
+        "codeLine": 3,
+        "instructions": [
+          {
+            "type": "heap",
+            "action": "push",
+            "payload": {
+              "name": "x",
+              "value": "3",
+              "type": "int",
+              "classes": [
+                "object_2"
+              ],
+              "tooltip": ""
+            }
+          },
+          {
+            "type": "heap",
+            "action": "push",
+            "payload": {
+              "name": "y",
+              "value": "4",
+              "type": "int",
+              "classes": [
+                "object_2"
+              ],
+              "tooltip": ""
+            }
+          },
+          {
+            "type": "memStack",
+            "action": "push",
+            "payload": {
+              "name": "b",
+              "value": "0x0015",
+              "type": "Reference",
+              "classes": [
+                "object_2"
+              ],
+              "tooltip": "Reference to Point at 0x0015"
+            }
+          }
+        ]
+      },
+      {
+        "explanation": "A new Line object is created with references to Point a and Point b, and a reference is stored in 'line'.",
+        "codeLine": 4,
+        "instructions": [
+          {
+            "type": "heap",
+            "action": "push",
+            "payload": {
+              "name": "a",
+              "value": "0x0001",
+              "type": "Reference",
+              "classes": [
+                "object_3"
+              ],
+              "tooltip": ""
+            }
+          },
+          {
+            "type": "heap",
+            "action": "push",
+            "payload": {
+              "name": "b",
+              "value": "0x0015",
+              "type": "Reference",
+              "classes": [
+                "object_3"
+              ],
+              "tooltip": ""
+            }
+          },
+          {
+            "type": "memStack",
+            "action": "push",
+            "payload": {
+              "name": "line",
+              "value": "0x00ff",
+              "type": "Reference",
+              "classes": [
+                "object_3"
+              ],
+              "tooltip": "Reference to Line object"
+            }
+          }
+        ]
+      },
+      {
+        "explanation": "The distance() method of the Line object is called.",
+        "codeLine": 6,
+        "instructions": [
+          {
+            "type": "callStack",
+            "action": "push",
+            "payload": {
+              "name": "line.distance()",
+              "classes": [
+                "object_3"
+              ],
+              "tooltip": ""
+            }
+          }
+        ]
+      },
+      {
+        "explanation": "The distance() method has finished executing and is popped from the call stack. And the return value is pushed onto the memory stack.",
+        "codeLine": 6,
+        "instructions": [
+          {
+            "type": "callStack",
+            "action": "pop",
+            "payload": {
+              "name": "line.distance()",
+              "classes": [
+                "object_3"
+              ],
+              "tooltip": ""
+            }
+          },
+          {
+            "type": "memStack",
+            "action": "push",
+            "payload": {
+              "name": "return",
+              "value": "15.81",
+              "type": "float",
+              "classes": [
+                "object_3"
+              ],
+              "tooltip": "The return value of the function line.distance()."
+            }
+          }
+        ]
+      },
+      {
+        "explanation": "`System.out.println(...)` is called to print the result to the console.",
+        "codeLine": 6,
+        "instructions": [
+          {
+            "type": "callStack",
+            "action": "push",
+            "payload": {
+              "name": "System.out.println(...)",
+              "classes": [],
+              "tooltip": ""
+            }
+          },
+          {
+            "type": "console",
+            "action": "push",
+            "payload": {
+              "text": "The result is: 15.81",
+              "tooltip": ""
+            }
+          }
+        ]
+      },
+      {
+        "explanation": "`System.out.println(...)` is done and therefore popped from the callstack.",
+        "codeLine": 6,
+        "instructions": [
+          {
+            "type": "callStack",
+            "action": "pop",
+            "payload": {
+              "name": "System.out.println(...)",
+              "classes": [],
+              "tooltip": ""
+            }
+          },
+          {
+            "type": "memStack",
+            "action": "pop",
+            "payload": {
+              "name": "return",
+              "value": "15.81",
+              "type": "float",
+              "classes": [],
+              "tooltip": "The return value of the function line.distance()."
+            }
+          }
+        ]
+      },
+      {
+        "explanation": "The main() method completes execution and is removed from the call stack.",
+        "codeLine": 7,
+        "instructions": [
+          {
+            "type": "callStack",
+            "action": "pop",
+            "payload": {
+              "name": "main()",
+              "classes": [
+                "method_main"
+              ],
+              "tooltip": ""
+            }
+          },
+          {
+            "type": "memStack",
+            "action": "pop",
+            "payload": {}
+          },
+          {
+            "type": "memStack",
+            "action": "pop",
+            "payload": {}
+          },
+          {
+            "type": "memStack",
+            "action": "pop",
+            "payload": {}
+          },
+          {
+            "type": "memStack",
+            "action": "pop",
+            "payload": {}
+          }
+        ]
+      }
+    ],
+    "code": [
+      "public class PointLineExample {",
+      "    public static void main(String[] args) {",
+      "        Point a = new Point(10, 5);",
+      "        Point b = new Point(3, 4);",
+      "        Line line = new Line(a, b);",
+      "",
+      "        System.out.println(line.distance());",
+      "    }",
+      "}",
+      "public class Line {",
+      "    Point a;",
+      "    Point b;",
+      "",
+      "    Line(Point a, Point b) {",
+      "        this.a = a;",
+      "        this.b = b;",
+      "    }",
+      "",
+      "    public double distance() {",
+      "        return Math.sqrt(Math.pow(a.x + b.x, 2) + Math.pow(a.y + b.y, 2));",
+      "    }",
+      "}",
+      "public class Point {",
+      "    int x;",
+      "    int y;",
+      "",
+      "    Point(int x, int y) {",
+      "        this.x = x;",
+      "        this.y = y;",
+      "    }",
+      "}"
+    ]
+  }
+]
